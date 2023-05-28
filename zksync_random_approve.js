@@ -112,7 +112,7 @@ async function randomApprove(index, accountAddress, privateKey) {
     const signed_tx = await web3.eth.accounts.signTransaction(tx, privateKey);
     const tx_receipt = await web3.eth.sendSignedTransaction(signed_tx.rawTransaction);
     console.log('交易已发送，交易哈希值：', `https://explorer.zksync.io/tx/${tx_receipt.transactionHash}`);
-    deleteLineWithContentSync(privateFile, privateKey)
+    //deleteLineWithContentSync(privateFile, privateKey)
 }
 
 function shuffle(array) {
